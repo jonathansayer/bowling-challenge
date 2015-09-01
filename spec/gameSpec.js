@@ -48,8 +48,7 @@ describe('game', function()
         expect(game1.frames[0].total).toBe(14);
       })
   })
-
-    it('a full game can be played where the the final three frames are strike, spare, strike and a bonus roll needs to be initiated', function(){
+    it('can be played fully when the final three frames are strike, spare, strike and a bonus roll needs to be initiated', function(){
       scoreStrike();
       fillFrameWith(6,3);
       scoreSpare(7,3);
@@ -65,7 +64,7 @@ describe('game', function()
       expect(game1.gameTotal).toBe(128);
     })
 
- it('a second full game can be played', function(){
+ it('can be played again, to completion', function(){
       scoreStrike();
       fillFrameWith(6,3);
       scoreSpare(7,3);
@@ -79,11 +78,5 @@ describe('game', function()
       game1.totalCalc();
       expect(game1.gameTotal).toBe(106);
     })
-
-
-
-
-
-
   });
 })
