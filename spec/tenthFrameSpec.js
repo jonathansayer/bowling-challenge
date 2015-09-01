@@ -14,6 +14,16 @@ describe ('Tenth Frame',function(){
       enterScores(3,6);
       expect(testFrame.total).toBe(9);
     });
+
+    it('wont allow any more than two scores to be entered', function(){
+      enterScores(4,5);
+      expect( function(){ testFrame.scoreInput(6); } ).toThrow(new Error("The Frame is Full"));
+    });
+
+    it('records the scores in the frame', function() {
+      enterScores(4,5);
+      expect(testFrame.scores).toEqual([4,5]);
+    });
   })
 
   describe ('When a strike is scored', function(){
@@ -31,18 +41,6 @@ describe ('Tenth Frame',function(){
       strikeShot();
       expect(testFrame.full).toBe(true);
     })
-  })
-
-  describe('recording scores in the frame', function(){
-    it('wont allow any more than two scores to be entered', function(){
-      enterScores(4,5);
-      expect( function(){ testFrame.scoreInput(6); } ).toThrow(new Error("The Frame is Full"));
-    });
-
-    it('records the scores in the frame', function() {
-      enterScores(4,5);
-      expect(testFrame.scores).toEqual([4,5]);
-    });
   })
 
   describe('When a spare is scored', function(){
