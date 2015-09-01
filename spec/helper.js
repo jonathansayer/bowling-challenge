@@ -13,10 +13,10 @@ var scoreSpare = function(score1, score2) {
 }
 
 var enterScores = function(score1, score2) {
-  frame1.scoreInput(score1);
-  frame1.scoreInput(score2);
+  testFrame.scoreInput(score1);
+  testFrame.scoreInput(score2);
 }
 
 var strikeShot = function() {
-  frame1.scoreInput(10);
+  testFrame.scoreInput(10);
 }
