@@ -2,10 +2,10 @@
 Bowling Challenge
 =================
 
+![travis CI build](https://travis-ci.org/jonathansayer/bowling-challenge.svg?branch=master)
+
 Introduction
 ---------
-=======
-![travis CI build](https://travis-ci.org/jonathansayer/bowling-challenge.svg?branch=master)
 
 The Bowling Challenge was issued by Makers Academy in Week 5 of the course. The aim of the challenge was to build the backend logic, in JavaScript, to be used for a bowling scorecard.
 
