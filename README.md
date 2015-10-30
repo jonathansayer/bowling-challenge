@@ -7,7 +7,7 @@ Bowling Challenge
 Introduction
 ---------
 
-The Bowling Challenge was issued by Makers Academy in Week 5 of the course. The aim of the challenge was to build the backend logic, in JavaScript, to be used for a bowling scorecard.
+The Bowling Challenge was issued by Makers Academy after a week of learning JavaScript. The aim of the challenge was to build the backend logic, in JavaScript, to be used for a bowling scorecard.
 
 Bowling Rules
 ---------
@@ -42,19 +42,19 @@ More about ten pin bowling here: http://en.wikipedia.org/wiki/Ten-pin_bowling
 How I Tackled the Challenge
 -------
 
-To tackle this challenge I used an Object Orientated Programming approach and built a frame, game and tenth Frame "class". The first to be built was the frame. The role of the frame is to know the status of the frame (i.e strike, spare or neither) and to store the score for that spare as well as the scores of the individual rolls. The tenth frame class performs the same as the frame class whilst also allowing for an extra roll in if a strike or spare is scored. The game class stores 9 instances of frame and one of tenthFrame. The role of game is store the total score and input scores into the relevant frame as well as adding bonus scores in the event of a strike or spare.
+To tackle this challenge I used an Object Orientated Programming approach and built a frame, game and tenthFrame "class". The first to be built was the frame. The role of the frame is to know the status of the frame (i.e strike, spare or neither) and to store the score for that spare as well as the scores of the individual rolls. The tenth frame class performs the same functions as the frame class whilst also allowing for an extra roll in the event a strike or spare is scored. The game class stores 9 instances of frame and one of tenthFrame. The role of the game class is store the total score and input scores into the relevant frame as well as adding bonus scores in the event of a strike or spare.
 
 
 Difficulties
 -----
 
-The biggest difficulty I had in this challenge was the figuring out the logic that goes into adding bonus points. Since the bonus points cannot be added until the next frame has been played, this involved referring to past frames.
+The biggest difficulty I had in this challenge was figuring out the logic that goes into adding bonus points. Since the bonus points cannot be added until the next frame has been played, this involved referring to past frames. The creation of the tenthFrame class only came around after trying to implement 10 frame instances. It took some time before I realised I could create a seperate tenthFrame class, which made my life a lot easier.
 I have also never used the Jasmine testing suite before now, so learning how to use that was a little time consuming but well worth it when it comes to testing code properly.
 
 How to use the Program
 -----
 
-Once the repo has been cloned, a user only needs to interact with the game class. You will need to be working in an interactive javascript like the console on Chrome or node in the command line.
+Once the repo has been cloned, a user only needs to interact with the game class. You will need to be working in an interactive javascript environment like the console on Chrome or node in the command line.
 
 ```
 game.addScore(6);
@@ -71,4 +71,9 @@ game.totalCalc();
  ```
  and thats it.
 
- Of course this code was Test Driven. The suite was Jasmine as mentioned earlier. To runt the tests, simply open on the SpecRunner.html file in your preferred browser.
+ Of course this code was Test Driven. The suite was Jasmine,as mentioned earlier. To run the tests, simply open the SpecRunner.html file in your preferred browser.
+
+Future Developments
+---------
+
+An interactive User experience is being developed, hence the views folder in src, and will be continued to built upon.
